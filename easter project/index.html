@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings Creation - Easter Message of Hope</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #5D5CDE;
+            --secondary: #FFD700;
+            --accent: #E91E63;
+            --light: #FFFFFF;
+            --dark: #181818;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: #333;
+            transition: all 0.3s ease;
+            overflow-x: hidden;
+        }
+        
+        .dark {
+            background-color: var(--dark);
+            color: #f8f9fa;
+        }
+        
+        .dark .card, .dark .navbar, .dark .footer {
+            background-color: #2d2d2d;
+            color: #f8f9fa;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #9370DB 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 0;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .bounce-animation {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .cross {
+            position: relative;
+            width: 80px;
+            height: 120px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        
+        .cross:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            width: 20px;
+            height: 120px;
+            background: var(--secondary);
+            border-radius: 10px;
+        }
+        
+        .cross:after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 80px;
+            height: 20px;
+            background: var(--secondary);
+            border-radius: 10px;
+        }
+        
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+            transform: rotate(30deg);
+            transition: 0.8s;
+            opacity: 0;
+        }
+        
+        .shine-effect:hover::after {
+            opacity: 1;
+            transform: rotate(30deg) translate(100%, 100%);
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .popup.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .popup-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            transform: scale(0.7);
+            transition: all 0.3s ease;
+        }
+        
+        .dark .popup-content {
+            background-color: #2d2d2d;
+            color: #f8f9fa;
+        }
+        
+        .popup.show .popup-content {
+            transform: scale(1);
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: #4949B3;
+            border-color: #4949B3;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            color: #333;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #E6C300;
+            border-color: #E6C300;
+            color: #333;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+        
+        .btn-accent:hover {
+            background-color: #D81B60;
+            border-color: #D81B60;
+        }
+        
+        input, select, textarea {
+            font-size: 16px !important;
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .verse-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .dark .verse-card {
+            background-color: rgba(45, 45, 45, 0.9);
+        }
+        
+        .verse-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        
+        .bible-game {
+            background: linear-gradient(135deg, #6A5ACD 0%, #483D8B 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            color: white;
+        }
+        
+        .question-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .option {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .option:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateX(10px);
+        }
+        
+        .option.correct {
+            background-color: rgba(46, 204, 113, 0.7);
+        }
+        
+        .option.incorrect {
+            background-color: rgba(231, 76, 60, 0.7);
+        }
+        
+        .congratulations {
+            background: linear-gradient(135deg, #FF9A9E 0%, #FAD0C4 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            color: #333;
+            margin-top: 1.5rem;
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .highlight {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background-color: rgba(255, 215, 0, 0.4);
+            z-index: -1;
+            transform: rotate(-2deg);
+        }
+        
+        #agency-name {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        .service-image {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .btn-main {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-main:hover::before {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Kings Creation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#verse">Daily Verse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#game">Bible Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button id="toggleTheme" class="btn btn-sm btn-outline-primary">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container py-5 position-relative" style="z-index: 1;">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 id="agency-name" class="floating">Kings Creation</h1>
+                    <h2 class="mb-4">Easter Message of <span class="highlight">Hope</span></h2>
+                    <div class="cross"></div>
+                    <p class="lead mb-4">
+                        On that first Easter morning, when Mary Magdalene and the other Mary went to the tomb, they found the stone rolled away. An angel greeted them saying, "Do not be afraid, for I know that you are looking for Jesus, who was crucified. He is not here; he has risen, just as he said." (Matthew 28:5-6)
+                    </p>
+                    <p class="lead mb-5">
+                        This Easter, may the miracle of resurrection fill your heart with hope, faith, and new beginnings. Just as Jesus conquered death, may you find the strength to overcome any challenge in your life.
+                    </p>
+                    <button class="btn btn-lg btn-secondary shine-effect mb-2 me-2 btn-main" onclick="playSound('buttonSound'); showPopup('welcomePopup')">
+                        Easter Message <i class="fas fa-dove ms-2"></i>
+                    </button>
+                    <button class="btn btn-lg btn-light shine-effect mb-2 btn-main" onclick="playSound('buttonSound'); scrollToSection('services')">
+                        Our Services <i class="fas fa-arrow-right ms-2"></i>
+                    </button>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="position-relative">
+                        <svg class="floating" width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="200" cy="200" r="150" fill="#E6C300" opacity="0.2" />
+                            <path d="M200 50 L200 350 M100 200 L300 200" stroke="#E6C300" stroke-width="20" stroke-linecap="round" />
+                            <circle cx="200" cy="200" r="30" fill="#E6C300" />
+                            <circle cx="200" cy="200" r="170" fill="none" stroke="#E6C300" stroke-width="3" stroke-dasharray="10 5" />
+                        </svg>
+                        <div id="profile-image" class="position-absolute" style="bottom: 20px; right: 20px; width: 150px; height: 150px; border-radius: 50%; background-color: #5D5CDE; display: flex; justify-content: center; align-items: center; color: white; font-weight: bold; font-size: 3rem; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+                            <span>KC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our <span class="text-primary">Services</span></h2>
+                <p class="lead">Professional design and development solutions for your business</p>
+                <div class="d-flex justify-content-center">
+                    <div style="width: 50px; height: 5px; background: var(--primary); border-radius: 5px;"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Graphic Design</h3>
+                            <p class="card-text">
+                                We create stunning visuals that capture attention and convey your message effectively.
+                                Our professional design services include:
+                            </p>
+                            <ul class="text-start">
+                                <li>Logo & Brand Identity</li>
+                                <li>Social Media Graphics</li>
+                                <li>Print Materials</li>
+                                <li>Marketing Collateral</li>
+                                <li>Illustrations & Infographics</li>
+                            </ul>
+                            <button class="btn btn-primary mt-3 shine-effect" onclick="playSound('buttonSound'); showPopup('graphicPopup')">
+                                Learn More <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Web Development</h3>
+                            <p class="card-text">
+                                We build responsive, user-friendly websites that help your business shine online.
+                                Our development services include:
+                            </p>
+                            <ul class="text-start">
+                                <li>Responsive Web Design</li>
+                                <li>E-commerce Solutions</li>
+                                <li>Content Management Systems</li>
+                                <li>Web Applications</li>
+                                <li>Website Maintenance</li>
+                            </ul>
+                            <button class="btn btn-primary mt-3 shine-effect" onclick="playSound('buttonSound'); showPopup('webPopup')">
+                                Learn More <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Verse Section -->
+    <section id="verse" class="py-5" style="background-color: #f8f9fa;">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Daily Easter <span class="text-primary">Verse</span></h2>
+                <p class="lead">Find inspiration and hope in God's word</p>
+                <div class="d-flex justify-content-center">
+                    <div style="width: 50px; height: 5px; background: var(--primary); border-radius: 5px;"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="verse-card">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-book-bible fa-3x text-primary mb-3"></i>
+                            <h3 id="verse-reference" class="fw-bold"></h3>
+                        </div>
+                        <div class="verse-content">
+                            <p id="verse-text" class="lead text-center fs-4 fst-italic"></p>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button class="btn btn-primary shine-effect" onclick="playSound('buttonSound'); getRandomVerse()">
+                                <i class="fas fa-sync-alt me-2"></i> New Verse
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bible Game Section -->
+    <section id="game" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Easter Bible <span class="text-primary">Quiz</span></h2>
+                <p class="lead">Test your knowledge of the Easter story from the Bible</p>
+                <div class="d-flex justify-content-center">
+                    <div style="width: 50px; height: 5px; background: var(--primary); border-radius: 5px;"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="bible-game">
+                        <div id="question-container" class="question-container">
+                            <h3 id="question" class="mb-4"></h3>
+                            <div id="options-container"></div>
+                        </div>
+                        <div class="text-center">
+                            <button id="next-button" class="btn btn-secondary" onclick="playSound('buttonSound'); nextQuestion()" style="display: none;">
+                                Next Question <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                        <div id="congratulations" class="congratulations">
+                            <i class="fas fa-trophy fa-3x mb-3"></i>
+                            <h3>Congratulations!</h3>
+                            <p class="lead">You've answered correctly! Keep reading the Bible to deepen your understanding of God's word and the Easter story.</p>
+                            <button class="btn btn-dark mt-3" onclick="playSound('buttonSound'); resetQuiz()">
+                                Play Again <i class="fas fa-redo ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Contact <span class="text-primary">Us</span></h2>
+                <p class="lead">Get in touch for your design and development needs</p>
+                <div class="d-flex justify-content-center">
+                    <div style="width: 50px; height: 5px; background: var(--primary); border-radius: 5px;"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <form id="contact-form">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="service" class="form-label">Service Interested In</label>
+                                    <select class="form-select" id="service">
+                                        <option selected>Select a service</option>
+                                        <option value="graphic-design">Graphic Design</option>
+                                        <option value="web-development">Web Development</option>
+                                        <option value="both">Both Services</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="Tell us about your project"></textarea>
+                                </div>
+                                <button type="button" class="btn btn-primary w-100 py-3 shine-effect" onclick="playSound('buttonSound'); submitForm()">
+                                    <i class="fas fa-paper-plane me-2"></i> Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h3 class="card-title mb-4">Contact Information</h3>
+                            <p class="mb-3">
+                                <i class="fas fa-phone-alt me-2 text-primary"></i> 076 995 6286
+                            </p>
+                            <p class="mb-3">
+                                <i class="fas fa-envelope me-2 text-primary"></i>kingori635@gmail.com
+                            </p>
+                            <p class="mb-3">
+                                <i class="fas fa-map-marker-alt me-2 text-primary"></i> Kenya,karatina uni
+                            </p>
+                            <h4 class="mt-4 mb-3">Follow Us</h4>
+                            <div class="social-links">
+                                <a href="#" class="btn btn-outline-primary me-2 rounded-circle">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary me-2 rounded-circle">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary me-2 rounded-circle">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary rounded-circle">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start">
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="mb-3">Kings Creation</h3>
+                    <p>Professional graphic design and web development services to elevate your business presence.</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="#verse" class="text-white text-decoration-none">Daily Verse</a></li>
+                        <li><a href="#game" class="text-white text-decoration-none">Bible Game</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Newsletter</h5>
+                    <p>Subscribe to our newsletter for updates and inspirational content.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your email" aria-label="Email" aria-describedby="button-addon2">
+                        <button class="btn btn-secondary" type="button" id="button-addon2" onclick="playSound('buttonSound')">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <p class="mb-0">© 2025hu Kings Creation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Popups -->
+    <div id="welcomePopup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup('welcomePopup')">&times;</span>
+            <div class="text-center">
+                <div class="cross"></div>
+                <h3 class="mb-4">Easter Blessings</h3>
+                <p class="lead">
+                    Welcome to Kings Creation! This Easter, we celebrate the resurrection of Jesus Christ and the hope it brings to all of us.
+                </p>
+                <p>
+                    "I am the resurrection and the life. The one who believes in me will live, even though they die; and whoever lives by believing in me will never die." - John 11:25-26
+                </p>
+                <button class="btn btn-primary mt-3" onclick="playSound('buttonSound'); closePopup('welcomePopup')">
+                    Amen <i class="fas fa-heart ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="graphicPopup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup('graphicPopup')">&times;</span>
+            <div class="text-center mb-4">
+                <i class="fas fa-paint-brush fa-3x text-primary mb-3"></i>
+                <h3>Graphic Design Services</h3>
+            </div>
+            <p>At Kings Creation, we provide professional graphic design services tailored to your unique needs:</p>
+            <ul>
+                <li><strong>Logo Design & Branding:</strong> Create a memorable identity for your business</li>
+                <li><strong>Print Materials:</strong> Brochures, business cards, flyers, and posters</li>
+                <li><strong>Social Media Graphics:</strong> Eye-catching visuals for your online presence</li>
+                <li><strong>Packaging Design:</strong> Stand out on the shelves with custom packaging</li>
+                <li><strong>Illustration:</strong> Custom artwork to bring your ideas to life</li>
+            </ul>
+            <p>Our design process involves understanding your vision, creating concepts, and refining until you're completely satisfied.</p>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary" onclick="playSound('buttonSound'); scrollToSection('contact'); closePopup('graphicPopup')">
+                    Contact Us <i class="fas fa-arrow-right ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="webPopup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup('webPopup')">&times;</span>
+            <div class="text-center mb-4">
+                <i class="fas fa-laptop-code fa-3x text-primary mb-3"></i>
+                <h3>Web Development Services</h3>
+            </div>
+            <p>Kings Creation delivers cutting-edge web solutions for businesses of all sizes:</p>
+            <ul>
+                <li><strong>Responsive Websites:</strong> Beautiful sites that work on all devices</li>
+                <li><strong>E-commerce Platforms:</strong> Online stores with secure payment processing</li>
+                <li><strong>Content Management:</strong> Easy-to-update websites with WordPress</li>
+                <li><strong>SEO Optimization:</strong> Improve your visibility in search engines</li>
+                <li><strong>Website Maintenance:</strong> Keep your site secure and up-to-date</li>
+            </ul>
+            <p>We focus on creating websites that not only look great but also drive results for your business.</p>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary" onclick="playSound('buttonSound'); scrollToSection('contact'); closePopup('webPopup')">
+                    Contact Us <i class="fas fa-arrow-right ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup('successPopup')">&times;</span>
+            <div class="text-center">
+                <i class="fas fa-check-circle fa-4x text-success mb-4"></i>
+                <h3 class="mb-3">Message Sent!</h3>
+                <p class="lead">Thank you for contacting Kings Creation. We will get back to you shortly.</p>
+                <button class="btn btn-primary mt-3" onclick="playSound('buttonSound'); closePopup('successPopup')">
+                    Close <i class="fas fa-times ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="buttonSound" preload="auto">
+        <source src="data:audio/mp3;base64,SUQzAwAAAAAAElRJVDIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/+1DEAAAKmLtX9BEAJbC3Kv6CIAQAAaQAAAAyMjI3VVVVVTMzM0xVVVVVMzMzTFVVVVUzMzNMVVVVVTMzM0xVVVVVMzMzTFVVVVUREREaqqqqtRERERqqqqq1ERERGqqqqrURERHP/+sQtDVVVWoi2REazMzTqqqqrQttttkXExRVVVVVSKJKqqisqqqq/+T9LWrF1VVVUoW22yLD5mZplVVVVaFtttpEU0TVVVVVIoiqqqqyqqqr/5P9S1VVVVKFttpEh8zM01VVVVQF+X9VU1NTU1NTQFQAAAAAAAA=" type="audio/mp3">
+    </audio>
+    <audio id="correctSound" preload="auto">
+        <source src="data:audio/mp3;base64,SUQzAwAAAAAAElRJVDIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+1DEAAAMCVVn9BAAJXS3Kv6CIAAAAaQAAABMREbIiIiLREREaIiIiLRERESoiIiItESEbIiIiLRERERoiIiPURERERoiIj1ERERERoiIj1ERERERoqPURERERERKj1ERERERESo9RERESoiIj1ERESoiIiPUREREqIiIj1ERESoiIiPUREREqIiI9RERESoiIj1ERESoiIj1ERESoiIj1ERESoiIj1ERERoiIj1ERESoiIj1ERESoiIj1ERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERER" type="audio/mp3">
+    </audio>
+    <audio id="incorrectSound" preload="auto">
+        <source src="data:audio/mp3;base64,SUQzAwAAAAAAElRJVDIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+1DEAAALoVVX9BAAJYS3K/oIgAAAAaQAAAAiIiLREREaIiIi0RERGiIiItERERoiIiLREREaIiIi0RERGiIiItERERoiIiLREREaIiI9RERESoiIj1ERESoiIj1ERESoiIj1ERESoiIj1ERESoiIj1ERESoiIj1ERESoiIj1ERESoiIj1ERESoiIj1ERERGiIiLREREaIiIi0RERGiIiItERERoiIiLREREaIiIi0RERGiIiItERERoiIiLREREaIiIi0RERGiIiItERERoiIiLREREaIiIi0REREREREREREREREREREREREREQ==" type="audio/mp3">
+    </audio>
+
+    <!-- Bootstrap & JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Theme Toggle
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark');
+            document.getElementById('toggleTheme').innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.body.classList.add('dark');
+                document.getElementById('toggleTheme').innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                document.body.classList.remove('dark');
+                document.getElementById('toggleTheme').innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+        
+        document.getElementById('toggleTheme').addEventListener('click', function() {
+            document.body.classList.toggle('dark');
+            if (document.body.classList.contains('dark')) {
+                this.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                this.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+            playSound('buttonSound');
+        });
+        
+        // Sound Functions
+        function playSound(soundId) {
+            const sound = document.getElementById(soundId);
+            sound.currentTime = 0;
+            sound.play();
+        }
+        
+        // Popup Functions
+        function showPopup(popupId) {
+            document.getElementById(popupId).classList.add('show');
+        }
+        
+        function closePopup(popupId) {
+            document.getElementById(popupId).classList.remove('show');
+        }
+        
+        // Smooth Scroll Function
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            window.scrollTo({
+                top: section.offsetTop - 70,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Bible Verses for Easter
+        const easterVerses = [
+            {
+                reference: "John 11:25-26",
+                text: "Jesus said to her, 'I am the resurrection and the life. The one who believes in me will live, even though they die; and whoever lives by believing in me will never die.'"
+            },
+            {
+                reference: "1 Peter 1:3",
+                text: "Praise be to the God and Father of our Lord Jesus Christ! In his great mercy he has given us new birth into a living hope through the resurrection of Jesus Christ from the dead."
+            },
+            {
+                reference: "Romans 6:9",
+                text: "We know that Christ, being raised from the dead, will never die again; death no longer has dominion over him."
+            },
+            {
+                reference: "Matthew 28:5-6",
+                text: "The angel said to the women, 'Do not be afraid, for I know that you are looking for Jesus, who was crucified. He is not here; he has risen, just as he said.'"
+            },
+            {
+                reference: "Luke 24:6-7",
+                text: "He is not here; he has risen! Remember how he told you, while he was still with you in Galilee: 'The Son of Man must be delivered over to the hands of sinners, be crucified and on the third day be raised again.'"
+            },
+            {
+                reference: "1 Corinthians 15:20",
+                text: "But Christ has indeed been raised from the dead, the firstfruits of those who have fallen asleep."
+            },
+            {
+                reference: "Acts 4:33",
+                text: "With great power the apostles continued to testify to the resurrection of the Lord Jesus. And God's grace was so powerfully at work in them all."
+            },
+            {
+                reference: "Romans 8:11",
+                text: "And if the Spirit of him who raised Jesus from the dead is living in you, he who raised Christ from the dead will also give life to your mortal bodies because of his Spirit who lives in you."
+            },
+            {
+                reference: "Mark 16:6",
+                text: "'Don't be alarmed,' he said. 'You are looking for Jesus the Nazarene, who was crucified. He has risen! He is not here. See the place where they laid him.'"
+            },
+            {
+                reference: "John 20:29",
+                text: "Then Jesus told him, 'Because you have seen me, you have believed; blessed are those who have not seen and yet have believed.'"
+            }
+        ];
+        
+        // Get Random Verse
+        function getRandomVerse() {
+            const randomIndex = Math.floor(Math.random() * easterVerses.length);
+            const verse = easterVerses[randomIndex];
+            document.getElementById('verse-reference').textContent = verse.reference;
+            document.getElementById('verse-text').textContent = verse.text;
+        }
+        
+        // Bible Quiz Questions
+        const quizQuestions = [
+            {
+                question: "Who first discovered the empty tomb?",
+                options: [
+                    "Mary Magdalene and other women",
+                    "Peter and John",
+                    "The Roman guards",
+                    "The disciples"
+                ],
+                correctAnswer: 0
+            },
+            {
+                question: "On what day of the week did Jesus rise from the dead?",
+                options: [
+                    "Monday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                ],
+                correctAnswer: 3
+            },
+            {
+                question: "How many days was Jesus in the tomb?",
+                options: [
+                    "One day",
+                    "Two days",
+                    "Three days",
+                    "Seven days"
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "What was rolled away from the entrance of the tomb?",
+                options: [
+                    "A wooden door",
+                    "A large stone",
+                    "A curtain",
+                    "A metal gate"
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "Who did Jesus appear to on the road to Emmaus?",
+                options: [
+                    "Peter and John",
+                    "Mary and Martha",
+                    "Two disciples",
+                    "The Roman soldiers"
+                ],
+                correctAnswer: 2
+            }
+        ];
+        
+        let currentQuestionIndex = 0;
+        
+        // Load Question
+        function loadQuestion(index) {
+            const questionContainer = document.getElementById('question-container');
+            const optionsContainer = document.getElementById('options-container');
+            const question = quizQuestions[index];
+            
+            document.getElementById('question').textContent = question.question;
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach((option, i) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'option';
+                optionElement.textContent = option;
+                optionElement.onclick = () => checkAnswer(i);
+                optionsContainer.appendChild(optionElement);
+            });
+            
+            document.getElementById('next-button').style.display = 'none';
+            document.getElementById('congratulations').style.display = 'none';
+        }
+        
+        // Check Answer
+        function checkAnswer(optionIndex) {
+            const options = document.querySelectorAll('.option');
+            const correctAnswerIndex = quizQuestions[currentQuestionIndex].correctAnswer;
+            
+            // Disable all options
+            options.forEach(option => {
+                option.style.pointerEvents = 'none';
+            });
+            
+            if (optionIndex === correctAnswerIndex) {
+                options[optionIndex].classList.add('correct');
+                playSound('correctSound');
+                document.getElementById('congratulations').style.display = 'block';
+            } else {
+                options[optionIndex].classList.add('incorrect');
+                options[correctAnswerIndex].classList.add('correct');
+                playSound('incorrectSound');
+            }
+            
+            document.getElementById('next-button').style.display = 'block';
+        }
+        
+        // Next Question
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizQuestions.length) {
+                loadQuestion(currentQuestionIndex);
+            } else {
+                currentQuestionIndex = 0;
+                loadQuestion(currentQuestionIndex);
+            }
+        }
+        
+        // Reset Quiz
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            loadQuestion(currentQuestionIndex);
+        }
+        
+        // Form Submission
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || service === 'Select a service' || !message) {
+                alert('Please fill out all fields before submitting.');
+                return;
+            }
+            
+            // In a real application, you would send this data to a server
+            console.log('Form submitted:', { name, email, service, message });
+            
+            // Reset form
+            document.getElementById('contact-form').reset();
+            
+            // Show success popup
+            showPopup('successPopup');
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load first verse
+            getRandomVerse();
+            
+            // Load first question
+            loadQuestion(0);
+            
+            // Show welcome popup after a delay
+            setTimeout(() => {
+                showPopup('welcomePopup');
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
